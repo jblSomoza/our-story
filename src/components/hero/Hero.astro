@@ -1,0 +1,338 @@
+---
+---
+
+<section class="hero">
+  <div class="sky"></div>
+  <div class="stars" id="stars"></div>
+  <div class="moon-glow"></div>
+  <div class="lanterns" id="lanterns"></div>
+  <div class="forest-layer forest-back"></div>
+  <div class="forest-layer forest-mid"></div>
+  <div class="forest-layer forest-front"></div>
+
+  <div class="tower-wrap">
+    <svg class="tower" viewBox="0 0 120 320" xmlns="http://www.w3.org/2000/svg">
+      <rect x="35" y="120" width="50" height="180" fill="#1a0f2e" stroke="#3d2060" stroke-width="1"/>
+      <polygon points="60,40 20,125 100,125" fill="#2a1545" stroke="#3d2060" stroke-width="1"/>
+      <polygon points="60,10 22,120 98,120" fill="#1e0d38"/>
+      <ellipse cx="60" cy="175" rx="10" ry="13" fill="#f5c842" opacity="0.85"/>
+      <ellipse cx="60" cy="175" rx="7" ry="10" fill="#fde68a" opacity="0.6"/>
+      <path d="M50,175 Q60,162 70,175" fill="none" stroke="#fde68a" stroke-width="1" opacity="0.7"/>
+      <circle cx="28" cy="200" r="6" fill="#1e3a1e" opacity="0.6"/>
+      <circle cx="22" cy="215" r="5" fill="#1e3a1e" opacity="0.5"/>
+      <circle cx="32" cy="228" r="7" fill="#1e3a1e" opacity="0.6"/>
+      <circle cx="94" cy="195" r="5" fill="#1e3a1e" opacity="0.5"/>
+      <circle cx="100" cy="212" r="6" fill="#1e3a1e" opacity="0.6"/>
+      <rect x="48" y="270" width="24" height="30" rx="4" fill="#120a22" stroke="#3d2060" stroke-width="1"/>
+      <path d="M48,270 Q60,258 72,270" fill="#120a22" stroke="#3d2060" stroke-width="1"/>
+    </svg>
+    <div class="tower-glow"></div>
+  </div>
+
+  <div class="content">
+    <p class="subtitle">✦ Una historia para recordar ✦</p>
+    <h1 class="title">Our Story</h1>
+    <p class="tagline">
+      Como las linternas que iluminan la noche,<br/>
+      cada momento contigo brilla para siempre.
+    </p>
+    <a href="#recuerdos" class="cta-btn">Comenzar el viaje</a>
+  </div>
+
+  <div class="fireflies" id="fireflies"></div>
+
+  <div class="scroll-hint">
+    <span>↓</span>
+  </div>
+</section>
+
+<style>
+  .hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .sky {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 50% 0%, #1a0a3d 0%, #0d0622 40%, #060210 100%);
+    z-index: 0;
+  }
+
+  .moon-glow {
+    position: absolute;
+    top: 6%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(253,230,138,0.18) 0%, rgba(253,230,138,0.06) 50%, transparent 75%);
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  .stars, .lanterns, .fireflies {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+  }
+  .stars   { z-index: 1; }
+  .lanterns{ z-index: 3; }
+  .fireflies{ z-index: 4; }
+
+  .forest-layer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    pointer-events: none;
+    z-index: 5;
+  }
+
+  .forest-back {
+    height: 28vh;
+    background:
+      radial-gradient(ellipse 60px 100px at 5% 100%, #0d1a0d 49%, transparent 50%),
+      radial-gradient(ellipse 80px 120px at 12% 100%, #0d1a0d 49%, transparent 50%),
+      radial-gradient(ellipse 55px 90px at 19% 100%, #0d1a0d 49%, transparent 50%),
+      radial-gradient(ellipse 90px 130px at 27% 100%, #0d1a0d 49%, transparent 50%),
+      radial-gradient(ellipse 60px 100px at 34% 100%, #0d1a0d 49%, transparent 50%),
+      radial-gradient(ellipse 70px 110px at 43% 100%, #0d1a0d 49%, transparent 50%),
+      radial-gradient(ellipse 85px 125px at 52% 100%, #0d1a0d 49%, transparent 50%),
+      radial-gradient(ellipse 60px 95px at 60% 100%, #0d1a0d 49%, transparent 50%),
+      radial-gradient(ellipse 75px 115px at 68% 100%, #0d1a0d 49%, transparent 50%),
+      radial-gradient(ellipse 55px 90px at 76% 100%, #0d1a0d 49%, transparent 50%),
+      radial-gradient(ellipse 80px 120px at 84% 100%, #0d1a0d 49%, transparent 50%),
+      radial-gradient(ellipse 65px 105px at 92% 100%, #0d1a0d 49%, transparent 50%),
+      radial-gradient(ellipse 50px 85px at 99% 100%, #0d1a0d 49%, transparent 50%);
+    opacity: 0.7;
+  }
+
+  .forest-mid {
+    height: 22vh;
+    background:
+      radial-gradient(ellipse 70px 110px at 2% 100%, #111e11 49%, transparent 50%),
+      radial-gradient(ellipse 90px 130px at 9% 100%, #111e11 49%, transparent 50%),
+      radial-gradient(ellipse 65px 105px at 17% 100%, #111e11 49%, transparent 50%),
+      radial-gradient(ellipse 80px 120px at 24% 100%, #111e11 49%, transparent 50%),
+      radial-gradient(ellipse 55px 90px at 31% 100%, #111e11 49%, transparent 50%),
+      radial-gradient(ellipse 95px 140px at 40% 100%, #111e11 49%, transparent 50%),
+      radial-gradient(ellipse 60px 100px at 49% 100%, #111e11 49%, transparent 50%),
+      radial-gradient(ellipse 75px 115px at 57% 100%, #111e11 49%, transparent 50%),
+      radial-gradient(ellipse 85px 125px at 65% 100%, #111e11 49%, transparent 50%),
+      radial-gradient(ellipse 60px 95px at 73% 100%, #111e11 49%, transparent 50%),
+      radial-gradient(ellipse 70px 110px at 81% 100%, #111e11 49%, transparent 50%),
+      radial-gradient(ellipse 90px 130px at 89% 100%, #111e11 49%, transparent 50%),
+      radial-gradient(ellipse 55px 88px at 96% 100%, #111e11 49%, transparent 50%);
+    opacity: 0.85;
+  }
+
+  .forest-front {
+    height: 16vh;
+    background:
+      radial-gradient(ellipse 80px 120px at 0% 100%, #0a1509 49%, transparent 50%),
+      radial-gradient(ellipse 100px 140px at 7% 100%, #0a1509 49%, transparent 50%),
+      radial-gradient(ellipse 70px 110px at 15% 100%, #0a1509 49%, transparent 50%),
+      radial-gradient(ellipse 90px 130px at 22% 100%, #0a1509 49%, transparent 50%),
+      radial-gradient(ellipse 60px 95px at 30% 100%, #0a1509 49%, transparent 50%),
+      radial-gradient(ellipse 85px 125px at 38% 100%, #0a1509 49%, transparent 50%),
+      radial-gradient(ellipse 70px 108px at 47% 100%, #0a1509 49%, transparent 50%),
+      radial-gradient(ellipse 95px 135px at 55% 100%, #0a1509 49%, transparent 50%),
+      radial-gradient(ellipse 65px 100px at 63% 100%, #0a1509 49%, transparent 50%),
+      radial-gradient(ellipse 80px 120px at 71% 100%, #0a1509 49%, transparent 50%),
+      radial-gradient(ellipse 90px 130px at 79% 100%, #0a1509 49%, transparent 50%),
+      radial-gradient(ellipse 60px 95px at 87% 100%, #0a1509 49%, transparent 50%),
+      radial-gradient(ellipse 75px 115px at 95% 100%, #0a1509 49%, transparent 50%),
+      radial-gradient(ellipse 55px 88px at 100% 100%, #0a1509 49%, transparent 50%);
+  }
+
+  .tower-wrap {
+    position: absolute;
+    bottom: 14vh;
+    left: 12%;
+    z-index: 6;
+    pointer-events: none;
+  }
+
+  .tower {
+    width: 90px;
+    height: auto;
+    filter: drop-shadow(0 0 12px rgba(245,200,66,0.3));
+  }
+
+  .tower-glow {
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 40px;
+    background: radial-gradient(ellipse, rgba(245,200,66,0.15) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+
+  .content {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    padding: 2rem;
+    max-width: 600px;
+  }
+
+  .subtitle {
+    font-family: 'Lora', serif;
+    font-size: 0.85rem;
+    letter-spacing: 0.25em;
+    color: #c9a84c;
+    text-transform: uppercase;
+    margin-bottom: 1.2rem;
+    opacity: 0.9;
+  }
+
+  .title {
+    font-family: 'Cinzel Decorative', cursive;
+    font-size: clamp(2.5rem, 7vw, 5rem);
+    font-weight: 700;
+    color: #fde68a;
+    text-shadow:
+      0 0 30px rgba(253,230,138,0.5),
+      0 0 80px rgba(253,200,66,0.25),
+      0 2px 4px rgba(0,0,0,0.8);
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+  }
+
+  .tagline {
+    font-family: 'Lora', serif;
+    font-style: italic;
+    font-size: clamp(0.95rem, 2.2vw, 1.15rem);
+    color: #e8d5b0;
+    line-height: 1.9;
+    margin-bottom: 2.5rem;
+    opacity: 0.88;
+  }
+
+  .cta-btn {
+    display: inline-block;
+    font-family: 'Cinzel Decorative', cursive;
+    font-size: 0.85rem;
+    letter-spacing: 0.12em;
+    color: #1a0f2e;
+    background: linear-gradient(135deg, #f5c842 0%, #e8a820 50%, #f5c842 100%);
+    border: none;
+    padding: 0.9rem 2.4rem;
+    border-radius: 50px;
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow:
+      0 0 20px rgba(245,200,66,0.4),
+      0 4px 15px rgba(0,0,0,0.4);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .cta-btn:hover {
+    transform: translateY(-2px) scale(1.03);
+    box-shadow:
+      0 0 35px rgba(245,200,66,0.65),
+      0 6px 20px rgba(0,0,0,0.5);
+  }
+
+  .scroll-hint {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    color: #c9a84c;
+    font-size: 1.4rem;
+    opacity: 0.6;
+    animation: bounce 2s infinite ease-in-out;
+    pointer-events: none;
+  }
+
+  @keyframes bounce {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50%       { transform: translateX(-50%) translateY(8px); }
+  }
+
+  @keyframes float-up {
+    0%   { transform: translateY(0) translateX(0) rotate(0deg); opacity: 0; }
+    10%  { opacity: 0.85; }
+    80%  { opacity: 0.7; }
+    100% { transform: translateY(-110vh) translateX(var(--drift)) rotate(8deg); opacity: 0; }
+  }
+
+  @keyframes twinkle {
+    0%, 100% { opacity: 0.2; }
+    50%       { opacity: 1; }
+  }
+
+  @keyframes firefly {
+    0%   { transform: translate(0, 0); opacity: 0; }
+    25%  { opacity: 0.9; }
+    50%  { transform: translate(var(--fx), var(--fy)); opacity: 0.6; }
+    75%  { opacity: 0.9; }
+    100% { transform: translate(0, 0); opacity: 0; }
+  }
+</style>
+
+<script>
+  const starsEl = document.getElementById('stars')!;
+  for (let i = 0; i < 200; i++) {
+    const s = document.createElement('div');
+    const size = Math.random() * 2.2 + 0.5;
+    s.style.cssText = `
+      position:absolute;left:${Math.random()*100}%;top:${Math.random()*70}%;
+      width:${size}px;height:${size}px;border-radius:50%;background:#fff;
+      animation:twinkle ${2+Math.random()*4}s ${Math.random()*5}s infinite ease-in-out;
+    `;
+    starsEl.appendChild(s);
+  }
+
+  const lanternsEl = document.getElementById('lanterns')!;
+  function spawnLantern() {
+    const l = document.createElement('div');
+    const size = 18 + Math.random() * 22;
+    const left = 15 + Math.random() * 70;
+    const duration = 12 + Math.random() * 10;
+    const drift = (Math.random() - 0.5) * 120;
+    const hue = Math.random() > 0.3 ? '#f5c842' : '#ff9a3c';
+    l.style.cssText = `
+      position:absolute;bottom:-60px;left:${left}%;
+      width:${size}px;height:${size*1.35}px;--drift:${drift}px;
+      animation:float-up ${duration}s ${Math.random()*2}s linear forwards;
+    `;
+    l.innerHTML = `<svg viewBox="0 0 40 54" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+      <ellipse cx="20" cy="27" rx="18" ry="22" fill="${hue}" opacity="0.18"/>
+      <rect x="16" y="2" width="8" height="5" rx="2" fill="#c8a030" opacity="0.9"/>
+      <ellipse cx="20" cy="29" rx="14" ry="18" fill="${hue}" opacity="0.75"/>
+      <ellipse cx="20" cy="29" rx="10" ry="13" fill="${hue}" opacity="0.5"/>
+      <ellipse cx="17" cy="23" rx="4" ry="6" fill="#fff9e0" opacity="0.4"/>
+      <rect x="16" y="47" width="8" height="5" rx="2" fill="#c8a030" opacity="0.9"/>
+    </svg>`;
+    l.addEventListener('animationend', () => l.remove());
+    lanternsEl.appendChild(l);
+  }
+  for (let i = 0; i < 18; i++) setTimeout(spawnLantern, i * 400);
+  setInterval(spawnLantern, 1800);
+
+  const firefliesEl = document.getElementById('fireflies')!;
+  for (let i = 0; i < 30; i++) {
+    const f = document.createElement('div');
+    const fx = (Math.random()-0.5)*80, fy = (Math.random()-0.5)*80;
+    f.style.cssText = `
+      position:absolute;left:${Math.random()*100}%;top:${30+Math.random()*55}%;
+      width:3px;height:3px;border-radius:50%;background:#c8ff80;
+      box-shadow:0 0 6px 2px rgba(180,255,100,0.7);
+      --fx:${fx}px;--fy:${fy}px;
+      animation:firefly ${4+Math.random()*6}s ${Math.random()*8}s infinite ease-in-out;
+    `;
+    firefliesEl.appendChild(f);
+  }
+</script>

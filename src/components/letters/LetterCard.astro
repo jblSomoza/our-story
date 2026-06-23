@@ -1,0 +1,107 @@
+---
+interface Props {
+  title: string;
+  body: string;
+  date: string;
+  from: string;
+}
+
+const { title, body, date, from } = Astro.props;
+---
+
+<article class="letter-card">
+  <div class="letter-inner">
+    <div class="wax-seal">💛</div>
+    <span class="letter-date">{date}</span>
+    <h3 class="letter-title">{title}</h3>
+    <p class="letter-body">{body}</p>
+    <p class="letter-from">— {from}</p>
+  </div>
+</article>
+
+<style>
+  .letter-card {
+    position: relative;
+    background: linear-gradient(145deg, #1e1030 0%, #160c28 100%);
+    border: 1px solid rgba(245,200,66,0.2);
+    border-radius: 4px 4px 12px 12px;
+    padding: 0;
+    overflow: visible;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+  }
+
+  .letter-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #c9a84c, #f5c842, #c9a84c);
+    border-radius: 4px 4px 0 0;
+  }
+
+  .letter-card:hover {
+    transform: translateY(-6px) rotate(0.5deg);
+    box-shadow:
+      0 16px 48px rgba(0,0,0,0.5),
+      0 0 24px rgba(245,200,66,0.08);
+  }
+
+  .letter-inner {
+    padding: 2rem 1.8rem 1.8rem;
+    position: relative;
+  }
+
+  .wax-seal {
+    position: absolute;
+    top: -18px;
+    right: 24px;
+    width: 36px;
+    height: 36px;
+    background: radial-gradient(circle, #c8400a, #8b2500);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+    border: 2px solid rgba(245,200,66,0.3);
+  }
+
+  .letter-date {
+    font-family: 'Lora', serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #c9a84c;
+    opacity: 0.7;
+    display: block;
+    margin-bottom: 0.7rem;
+  }
+
+  .letter-title {
+    font-family: 'Cinzel Decorative', cursive;
+    font-size: 1rem;
+    color: #fde68a;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+  }
+
+  .letter-body {
+    font-family: 'Lora', serif;
+    font-style: italic;
+    font-size: 0.95rem;
+    color: #c8b08a;
+    line-height: 1.85;
+    margin-bottom: 1.2rem;
+  }
+
+  .letter-from {
+    font-family: 'Lora', serif;
+    font-size: 0.85rem;
+    color: #c9a84c;
+    text-align: right;
+    opacity: 0.8;
+  }
+</style>
