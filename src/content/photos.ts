@@ -7,7 +7,7 @@ export interface Photo {
 export const photos: Photo[] = [
   {
     src: "/photos/foto-uno.jpeg",
-    caption: "El comienzo de todo",
-    date: "2025",
+    caption: "Nuestro comienzo hacia un amor bonito",
+    date: "2026",
   },
 ];
