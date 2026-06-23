@@ -10,7 +10,7 @@ import { photos } from "../../content/photos";
     <p class="section-desc">Cada foto, una historia. Cada historia, un tesoro.</p>
   </div>
 
-  <Slider photos={photos} client:load />
+  <Slider photos={photos} base={import.meta.env.BASE_URL} client:load />
 </section>
 
 <style>

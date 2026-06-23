@@ -3,11 +3,12 @@ import type { Photo } from "../../content/photos";
 
 interface Props {
   photos: Photo[];
+  base: string;
 }
 
 const COMING_SOON_COUNT = 3;
 
-export default function Slider({ photos }: Props) {
+export default function Slider({ photos, base }: Props) {
   const [current, setCurrent] = useState(0);
   const single = photos.length === 1;
 
@@ -22,7 +23,7 @@ export default function Slider({ photos }: Props) {
           {photos.map((photo, i) => (
             <div key={i} className={`slide ${i === current ? "active" : i === (current - 1 + photos.length) % photos.length ? "prev" : "next"}`}>
               <div className="photo-frame">
-                <img src={photo.src} alt={photo.caption} loading="lazy" />
+                <img src={`${base}${photo.src}`} alt={photo.caption} loading="lazy" />
                 <div className="photo-overlay">
                   <p className="photo-caption">{photo.caption}</p>
                   <span className="photo-date">{photo.date}</span>
