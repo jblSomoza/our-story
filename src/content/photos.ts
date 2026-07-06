@@ -10,4 +10,24 @@ export const photos: Photo[] = [
     caption: "Nuestro comienzo hacia un amor bonito",
     date: "2026",
   },
+  {
+    src: "/photos/foto-dos.jpeg",
+    caption: "Nuestro primer partido juntos",
+    date: "2027",
+  },
+  {
+    src: "/photos/foto-tres.jpeg",
+    caption: "Nuestro primer partido juntos",
+    date: "2028",
+  },
+  {
+    src: "/photos/foto-cuatro.jpeg",
+    caption: "Nuestro primer partido juntos",
+    date: "2029",
+  },
+  {
+    src: "/photos/foto-cinco.jpeg",
+    caption: "Nuestro primer partido juntos",
+    date: "2030",
+  },
 ];
