@@ -96,10 +96,6 @@ const { title, artist, dedication, url, emoji } = Astro.props;
     font-size: 0.88rem;
     color: #c8b08a;
     line-height: 1.6;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
   }
 
   .play-btn {
@@ -124,5 +120,40 @@ const { title, artist, dedication, url, emoji } = Astro.props;
 
   .play-btn svg {
     margin-left: 2px;
+  }
+
+  @media (max-width: 480px) {
+    .song-inner {
+      grid-template-columns: 44px 1fr;
+      grid-template-rows: auto auto;
+      align-items: start;
+    }
+
+    .song-emoji {
+      width: 44px;
+      height: 44px;
+      font-size: 1.2rem;
+      grid-column: 1;
+      grid-row: 1;
+    }
+
+    .song-info {
+      grid-column: 2;
+      grid-row: 1;
+    }
+
+    .song-title {
+      white-space: normal;
+      overflow: visible;
+      text-overflow: unset;
+    }
+
+    .play-btn {
+      grid-column: 1 / -1;
+      grid-row: 2;
+      width: 100%;
+      border-radius: 8px;
+      height: 36px;
+    }
   }
 </style>
