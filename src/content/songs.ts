@@ -21,4 +21,11 @@ export const songs: Song[] = [
     url: "https://open.spotify.com/intl-es/track/0tgVpDi06FyKpA1z0VMD4v?si=215e19bc3d404c9a",
     emoji: "✨",
   },
+  {
+    title: "Amor bonito",
+    artist: "Kany García",
+    dedication: "Porque tu amor es un regalo que ilumina mi vida y me hace sentir completo.",
+    url: "https://open.spotify.com/intl-es/track/30ZakrQPwfjyrkiJfxGey9?si=9bc77eac104643a7",
+    emoji: "💖",
+  },
 ];

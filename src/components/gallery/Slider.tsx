@@ -21,7 +21,7 @@ export default function Slider({ photos, base }: Props) {
       <div className="slider">
         <div className="slider-track">
           {photos.map((photo, i) => (
-            <div key={i} className={`slide ${i === current ? "active" : i === (current - 1 + photos.length) % photos.length ? "prev" : "next"}`}>
+            <div key={i} className={`slide ${i === current ? "active" : i === (current - 1 + photos.length) % photos.length ? "prev" : i === (current + 1) % photos.length ? "next" : ""}`}>
               <div className="photo-frame">
                 <img src={`${base}${photo.src}`} alt={photo.caption} loading="lazy" />
                 <div className="photo-overlay">
@@ -50,7 +50,7 @@ export default function Slider({ photos, base }: Props) {
       </div>
 
       {/* ── Coming soon slots ── */}
-      <div className="incoming-row">
+      {photos.length < 3 && <div className="incoming-row">
         <p className="incoming-label">✦ Próximos recuerdos ✦</p>
         <div className="incoming-slots">
           {Array.from({ length: COMING_SOON_COUNT }).map((_, i) => (
@@ -62,7 +62,7 @@ export default function Slider({ photos, base }: Props) {
             </div>
           ))}
         </div>
-      </div>
+      </div>}
 
       <style>{`
         .slider-wrap {
