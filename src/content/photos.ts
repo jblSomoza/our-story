@@ -7,42 +7,42 @@ export interface Photo {
 export const photos: Photo[] = [
   {
     src: "/photos/foto-uno.jpeg",
-    caption: "Nuestro comienzo hacia un amor bonito",
+    caption: "El comienzo de nuestra historia más bonita",
     date: "2026",
   },
   {
     src: "/photos/foto-dos.jpeg",
-    caption: "Nuestro primer partido juntos",
+    caption: "La primera vez que compartimos la emoción del juego",
     date: "2026",
   },
   {
     src: "/photos/foto-tres.jpeg",
-    caption: "Nuestro primer partido juntos",
+    caption: "Una tarde sencilla que se volvió un recuerdo especial",
     date: "2026",
   },
   {
     src: "/photos/foto-cuatro.jpeg",
-    caption: "Nuestro primer partido juntos",
+    caption: "Juntos, haciendo de cada momento una celebración",
     date: "2026",
   },
   {
     src: "/photos/foto-cinco.jpeg",
-    caption: "Nuestro primer partido juntos",
+    caption: "El recuerdo de un día lleno de risas y complicidad",
     date: "2026",
   },
   {
     src: "/photos/foto-ocho.jpeg",
-    caption: "Flores del día de la novia",
+    caption: "Flores para celebrar lo especial que eres para mí",
     date: "2026",
   },
   {
     src: "/photos/foto-seis.jpeg",
-    caption: "Nuestro primer viaje en antigua juntos",
+    caption: "Nuestro primer viaje juntos, entre calles y momentos inolvidables",
     date: "2026",
   },
   {
     src: "/photos/foto-siete.jpeg",
-    caption: "",
+    caption: "Un instante más de nuestra historia, guardado para siempre",
     date: "2026",
   }
 ];
